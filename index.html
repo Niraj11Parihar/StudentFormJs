@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Participant Details</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+    ">
+    <!-- style.css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section class="crudoperation">
+        <center>
+            <div class="container">
+
+                <section class="form-container">
+                    <header>
+                        <h1>Students Details</h1>
+                        <input type="search" placeholder="search" class="search">
+                        <button onclick="add()" class="add-button">ADD+</button>
+                    </header>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Grid</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile Number</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </section>
+
+                <center>
+                    <section class="form-container">
+                        <form id="dataForm" class="d-none" onsubmit="return validateForm()">
+                            <label for="grid">Grid:</label>
+                            <input type="text" id="grid" name="grid" required><br><br>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required><br><br>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required><br><br>
+                            <label for="mobileNumber">Mobile Number:</label>
+                            <input type="tel" id="mobileNumber" name="mobileNumber" required pattern="[0-9]{10}"><br><br>
+                            <input type="submit" value="Submit">
+                            <input type="button" value="Close" onclick="closeForm()">
+                        </form>
+                    </section>
+                </center>
+
+            </div>
+        </center>
+    </section>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

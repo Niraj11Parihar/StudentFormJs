@@ -1,0 +1,148 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.d-none {
+  display: none;
+}
+
+.container {
+  width: 1300px;
+}
+
+.content {
+  box-shadow: 0px 0px 10px 2px #ccc;
+  padding: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1{
+  font-size: 30px;
+}
+
+.search {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-button  {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 5px solid red;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.actionbtn {
+  display: flex;
+  justify-content: center;
+  color: blue;
+}
+
+
+/* form style  */
+
+form {
+  background-color: #a5caa26f;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 400px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+label {
+  text-align: start;
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 17px;
+  color: #516957;
+  padding-left: 5px;
+  font-weight: bolder;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form p {
+  margin: 0;
+  text-align: start;
+  font-size: 15px;
+  color: red;
+  padding-left: 5px;
+}
+
+#action {
+  background-color: #45a049;
+  color:black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.3s;
+  margin: 0px 10px;
+}
+
+#action:hover {
+  background-color: #8bd88fb1;
+}
+
+button {
+  background-color: #45a049;
+  color:#ccc;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #239729b1;
+}
+
+i {
+  color: black;
+}
