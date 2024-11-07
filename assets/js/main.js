@@ -81,3 +81,40 @@ function validateForm() {
 }
 
 renderTable();
+
+
+// Searching part 
+
+document.getElementById("search").addEventListener("keyup", function () {
+    const filter = this.value.toLowerCase();
+    renderTable(filter);
+});
+
+function renderTable(filter = "") {
+    const tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = '';
+
+    data.forEach((row, index) => {
+        if (
+            row.grid.toLowerCase().includes(filter) ||
+            row.name.toLowerCase().includes(filter) ||
+            row.email.toLowerCase().includes(filter) ||
+            row.mobileNumber.includes(filter)
+        ) {
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td><input type="text" value="${row.grid}" onchange="updateData(${index}, 'grid', this.value)"></td>
+                <td><input type="text" value="${row.name}" onchange="updateData(${index}, 'name', this.value)"></td>
+                <td><input type="email" value="${row.email}" onchange="updateData(${index}, 'email', this.value)"></td>
+                <td><input type="tel" value="${row.mobileNumber}" onchange="updateData(${index}, 'mobileNumber', this.value)"></td>
+                <td>
+                    <button onclick="deleteRow(${index})">Delete</button>
+                    <button onclick="updateData(${index})">Update</button>
+                </td>
+            `;
+            tableBody.appendChild(newRow);
+        }
+    });
+}
+
+renderTable();
